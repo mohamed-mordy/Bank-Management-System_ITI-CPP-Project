@@ -5,17 +5,15 @@
 #include <unorderd_map>
 #include "BankAccount.h"
 
+/**
+ * BankSystemManager class represents the controller component of the system.
+ *
+ */
 class BankSystemManager {
 private:
     std::unordered_map<unsigned long, BankAccount> accounts;
-public: 
-    BankSystemManager() = default;    
-    void make_transaction(unsigned long from, unsigned long to, double amount);
-    void get_cash(unsigned long account, double amount);
-    void change_account_status(unsigned long accountID, AccountStatus status);
-    double get_balance(unsigned long accountID);
-    void deposit(unsigned long accountId, double amount);
-    bool validate_id(unsigned long accountID);
+public:  // Public Methods
+
 };
 
 #endif // BANK_SYSTEM_MANAGER_H__
